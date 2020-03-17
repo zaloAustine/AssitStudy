@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_slab_bold"
                 android:text="Hello ,"
+                android:layout_marginLeft="8dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -78,9 +79,7 @@
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/gray"
             app:queryHint="Search"
-            app:searchHintIcon="@color/gray"
             app:searchIcon="@drawable/search">
 
         </androidx.appcompat.widget.SearchView>
@@ -102,6 +101,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView"
         app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:cornerRadius="12dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="8dp"
+            android:text="Get Started" />
 
         <ImageView
             android:layout_width="match_parent"
