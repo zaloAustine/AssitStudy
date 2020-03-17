@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "646473098640",
+    "firebase_url": "https://assiststudy-f2c32.firebaseio.com",
+    "project_id": "assiststudy-f2c32",
+    "storage_bucket": "assiststudy-f2c32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646473098640:android:8606d7890f4557e179bf15",
+        "android_client_info": {
+          "package_name": "com.zalocoders.assiststudy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646473098640-99s6aomrp7egl7gi6a7e1l1uqerqbudb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zalocoders.assiststudy",
+            "certificate_hash": "5b99630cbe0ceaf46d897f4f94ff4d7c6cc9094b"
+          }
+        },
+        {
+          "client_id": "646473098640-q509ihuf76q13mkd72sdm9591gqk5nru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5elY2NL9C5BW_sqhjux_pCt2von6gv08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646473098640-q509ihuf76q13mkd72sdm9591gqk5nru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
