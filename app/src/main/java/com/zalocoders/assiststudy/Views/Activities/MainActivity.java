@@ -11,7 +11,6 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.zalocoders.assiststudy.Adapters.RecentViewCoursesAdapter;
 import com.zalocoders.assiststudy.Models.RecentViewCourses;
 import com.zalocoders.assiststudy.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,9 +38,9 @@ RecyclerView recentRecyclerview;
 
     }
     public void fake(){
-        for(int i=0;i<4;i++){
+        for(int i=0;i<2;i++){
             RecentViewCourses courses = new RecentViewCourses();
-            courses.setDescription("This is a beginner Kotlin android course");
+            courses.setDescription("This is a beginner Kotlin android course"+ i);
             courses.setName("Koltin Android");
             recentViewCourses.add(courses);
 

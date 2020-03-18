@@ -94,8 +94,6 @@
             <androidx.appcompat.widget.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusedByDefault="true"
                 app:queryHint="Search"
                 app:searchIcon="@drawable/search">
 
@@ -165,6 +163,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recentRecyclerview"
+            android:focusable="false"
+            android:focusedByDefault="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
