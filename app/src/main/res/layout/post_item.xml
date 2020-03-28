@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/cardview"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:text="Austine Z."
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/description"
+                android:maxLines="3"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:text="Austine Z."
+                android:textColor="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/like"
+            android:layout_weight="1"
+        app:backgroundTint="@android:color/white"
+        android:layout_gravity="left"
+            android:layout_marginRight="24dp"
+        android:textStyle="normal"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:text="LIKE"
+        android:textColor="@android:color/holo_blue_dark" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/comment"
+                android:layout_marginLeft="24dp"
+                app:backgroundTint="@android:color/white"
+                android:layout_gravity="right"
+                android:textStyle="normal"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:text="Comment"
+                android:textColor="@android:color/black" />
+    </LinearLayout>
+
+
+
+            <!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/placeholder4" />-->
+
+        </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+

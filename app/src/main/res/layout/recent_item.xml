@@ -3,14 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp"
-    android:layout_margin="12dp"
-    android:outlineAmbientShadowColor="@color/colorAccent"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/cardview"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
     app:cardElevation="4dp"
-    android:layout_marginBottom="12dp"
+    android:layout_marginBottom="8dp"
     android:layout_height="wrap_content">
 
         <LinearLayout
+            android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -36,11 +40,12 @@
                 android:textColor="@android:color/darker_gray" />
 
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/placeholder4" />
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/placeholder4" />-->
+
         </LinearLayout>
 
 

@@ -9,13 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.Activities.MainActivity">
+        <activity
+            android:name=".Views.Activities.NoteItemActivity"
+            android:label="@string/title_activity_note_item"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Views.Activities.CommentActivity"
+            android:label="@string/title_activity_comment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Views.Activities.UnitNotesActivity" />
+        <activity android:name=".Views.Activities.NextSignUpActivity" />
+        <activity android:name=".Views.Activities.PlanActivity" />
+        <activity android:name=".Views.Activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Views.Activities.LoginActivity" />
+        <activity android:name=".Views.Activities.Signup_activity" />
+        <activity android:name=".Views.Activities.MainActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

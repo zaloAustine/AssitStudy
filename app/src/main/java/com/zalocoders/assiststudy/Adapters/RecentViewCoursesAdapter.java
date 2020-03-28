@@ -11,19 +11,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textview.MaterialTextView;
-import com.zalocoders.assiststudy.Models.RecentViewCourses;
+import com.zalocoders.assiststudy.Models.UnitModel;
 import com.zalocoders.assiststudy.R;
 
 import java.util.List;
 
 public class RecentViewCoursesAdapter  extends RecyclerView.Adapter<RecentViewCoursesAdapter.ViewHolder> {
-    List<RecentViewCourses> recentViewCoursesList;
+    List<UnitModel> recentViewCoursesList;
     Context context;
     public boolean on_attach = true;
-    RecentViewCourses recentViewCourse;
+    UnitModel recentViewCourse;
 
 
-    public RecentViewCoursesAdapter(List<RecentViewCourses> recentViewCoursesList, Context context) {
+    public RecentViewCoursesAdapter(List<UnitModel> recentViewCoursesList, Context context) {
         this.recentViewCoursesList = recentViewCoursesList;
         this.context = context;
     }

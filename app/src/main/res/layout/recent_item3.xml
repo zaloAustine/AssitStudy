@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/cardview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_margin="14dp"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="12dp"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Austine Z."
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/created"
+            android:maxLines="3"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Austine Z."
+            android:textColor="@android:color/darker_gray" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:maxLines="3"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Austine Z."
+            android:textColor="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/placeholder4" />-->
+
+        </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+

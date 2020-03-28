@@ -1,24 +1,24 @@
 package com.zalocoders.assiststudy.Views.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.material.appbar.MaterialToolbar;
-import com.zalocoders.assiststudy.Adapters.RecentViewCoursesAdapter;
-import com.zalocoders.assiststudy.Models.RecentViewCourses;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zalocoders.assiststudy.R;
-import java.util.ArrayList;
-import java.util.List;
+import com.zalocoders.assiststudy.Views.Fragements.Qa_fragment;
+import com.zalocoders.assiststudy.Views.Fragements.explore_frgment;
+import com.zalocoders.assiststudy.Views.Fragements.home_fragment;
+import com.zalocoders.assiststudy.Views.Fragements.library_fragment;
 
 public class MainActivity extends AppCompatActivity {
 MaterialToolbar materialToolbar;
-List<RecentViewCourses>  recentViewCourses;
-RecentViewCoursesAdapter adapter;
-RecyclerView recentRecyclerview;
+BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,26 +26,55 @@ RecyclerView recentRecyclerview;
 
         materialToolbar = findViewById(R.id.materialToolbar);
         setSupportActionBar(materialToolbar);
-        recentRecyclerview = findViewById(R.id.recentRecyclerview);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
-        recentRecyclerview.setLayoutManager(gridLayoutManager);
 
-        recentViewCourses = new ArrayList<>();
-        fake();
-        adapter = new RecentViewCoursesAdapter(recentViewCourses,this);
-        recentRecyclerview.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-    }
-    public void fake(){
-        for(int i=0;i<2;i++){
-            RecentViewCourses courses = new RecentViewCourses();
-            courses.setDescription("This is a beginner Kotlin android course"+ i);
-            courses.setName("Koltin Android");
-            recentViewCourses.add(courses);
 
+
+
+
+        if(savedInstanceState == null){
+
+            Intent iin= getIntent();
+            int val = iin.getIntExtra("transaction",0);
+
+            if(val==3){
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,new library_fragment()).commit();
+
+            }else{
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,new home_fragment()).commit();
+
+            }
         }
 
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
+
+                switch (item.getItemId()){
+                    case R.id.home:
+                        fragment = new home_fragment();
+                        break;
+                    case R.id.library:
+                        fragment = new library_fragment();
+                        break;
+                    case R.id.post:
+                        fragment = new explore_frgment();
+                        break;
+                    case R.id.qa:
+                        fragment = new Qa_fragment();
+                        break;
+                }
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+
+                return true;
+            }
+        });
     }
+
 
 }

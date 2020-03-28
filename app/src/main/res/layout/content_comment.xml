@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+android:id="@+id/swipeRefresh2"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:focusableInTouchMode="true"
+android:layout_height="match_parent"
+android:focusable="true"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_comment">
+
+
+<androidx.core.widget.NestedScrollView
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        tools:layout_editor_absoluteX="-4dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:hint="Write a comment"
+                    android:padding="12dp"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postComement"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <ImageView
+                android:id="@+id/postC"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send"
+                android:layout_weight="6"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Comments"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/swipetext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="swipe to refresh"
+            android:layout_margin="12dp"
+            android:textSize="10sp"/>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentRecyclerview"
+            android:layout_width="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusedByDefault="false" />
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
